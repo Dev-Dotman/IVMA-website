@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import connectDB from '../../../lib/mongoose';
 import Waitlist from '../../../models/Waitlist';
+import { sendWaitlistEmail } from '../../../lib/email';
 
 export async function POST(request) {
   try {
@@ -33,10 +34,18 @@ export async function POST(request) {
       businessType,
     });
 
+    // Send welcome email (don't block response if email fails)
+    try {
+      await sendWaitlistEmail(email, name);
+    } catch (emailError) {
+      console.error('Failed to send welcome email:', emailError);
+      // Continue anyway - user is on the waitlist
+    }
+
     return NextResponse.json(
       { 
         success: true, 
-        message: 'Successfully joined the waitlist!',
+        message: 'Successfully joined the waitlist! Check your email.',
         id: waitlistEntry._id 
       },
       { status: 201 }
