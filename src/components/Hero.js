@@ -54,9 +54,9 @@ export default function Hero() {
         {/* Main Heading */}
         <div className="text-center mb-16">
           <h1 ref={titleRef} className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
-            <em className="font-light">We</em> make selling very
+            <em className="font-light">Selling</em> Made Simple with
             <br />
-            <em className="font-light">EASY</em>
+            IVMA
           </h1>
           <p ref={subtitleRef} className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Track, manage, and optimize your inventory from one powerful, easy-to-use, secure, scalable, and smart dashboard.

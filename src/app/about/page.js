@@ -21,7 +21,7 @@ const About = () => {
               </div>
               
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-gray-900 mb-8 leading-tight tracking-tight">
-                Making inventory<br />
+                Making inventory management<br />
                 <span className="text-green-600">stupid simple.</span>
               </h1>
 
