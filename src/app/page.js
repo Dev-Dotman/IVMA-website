@@ -18,7 +18,7 @@ export default function Home() {
         <ToolsPage />
         <BonusFeatures />
         <Features />
-        <AISection />
+        {/* <AISection /> */}
         <Testimonials />
         <CTA />
       </main>
