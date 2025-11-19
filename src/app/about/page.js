@@ -28,7 +28,7 @@ const About = () => {
               {/* Enhanced Description */}
               <p className="text-xl text-gray-600 font-light mb-8 leading-relaxed max-w-2xl">
                 We're tired of complicated software that needs a PhD to use. 
-                IVMA is built for real business owners who want things to just work.
+               IVY is built for real business owners who want things to just work.
               </p>
 
               {/* Stats */}
@@ -81,7 +81,7 @@ const About = () => {
                 {/* Main content card */}
                 <div className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm max-w-sm">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="text-sm text-gray-500 font-medium">IVMA DASHBOARD</div>
+                    <div className="text-sm text-gray-500 font-medium">IVY DASHBOARD</div>
                     <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
                       <Package className="w-4 h-4 text-white" />
                     </div>
@@ -140,12 +140,12 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed font-light max-w-4xl mx-auto">
-              "We built IVMA because we were tired of inventory software that made simple things complicated. 
+              "We built IVY because we were tired of inventory software that made simple things complicated. 
               Every business owner should be able to know what they have in stock without needing a computer science degree."
             </p>
             <div className="mt-8">
               <div className="text-gray-400 text-sm">
-                — The team behind IVMA
+                — The team behind IVY
               </div>
             </div>
           </div>
@@ -157,7 +157,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-light text-gray-900 mb-6 tracking-tight">
-              Why we built IVMA
+              Why we built IVY
             </h2>
             <p className="text-xl text-gray-600 font-light max-w-2xl mx-auto">
               Because running a business is hard enough without complicated software

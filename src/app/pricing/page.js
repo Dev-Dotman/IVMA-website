@@ -296,7 +296,7 @@ export default function PricingPage() {
                 Frequently asked questions
               </h2>
               <p className="text-xl text-gray-600">
-                Everything you need to know about IVMA pricing
+                Everything you need to know about IVY pricing
               </p>
             </div>
 
@@ -337,7 +337,7 @@ export default function PricingPage() {
               Ready to streamline your inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using IVMA to optimize their operations.
+              Join thousands of businesses already using IVY to optimize their operations.
             </p>
             <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors">
               Start Free Trial

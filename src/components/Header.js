@@ -6,7 +6,7 @@ export default function Header() {
           <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
             <span className="text-white font-bold text-sm">IV</span>
           </div>
-          <h1 className="text-xl font-semibold text-gray-900">IVMA</h1>
+          <h1 className="text-xl font-semibold text-gray-900">IVY</h1>
         </div>
         <nav className="hidden md:flex items-center space-x-8">
           <a href="/" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>

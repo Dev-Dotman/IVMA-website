@@ -78,7 +78,7 @@ export default function Footer() {
               <div ref={logoRef} className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                 <Package className="w-4 h-4 text-white" />
               </div>
-              <h3 className="text-xl font-semibold">IVMA</h3>
+              <h3 className="text-xl font-semibold">IVY</h3>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Streamline your inventory management with our powerful, easy-to-use SaaS platform trusted by thousands of businesses worldwide.
@@ -136,7 +136,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2024 IVMA. All rights reserved.
+            © 2024 IVY. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>

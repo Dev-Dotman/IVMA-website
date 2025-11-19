@@ -36,7 +36,7 @@ export default function CTA() {
       <div ref={contentRef} className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-light text-gray-900 mb-6">Ready to Get Started?</h2>
         <p className="text-xl text-gray-600 mb-8">
-          Join thousands of businesses already using IVMA to streamline their inventory management.
+          Join thousands of businesses already using IVY to streamline their inventory management.
         </p>
         <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors hover:scale-105 transform">
           Start Free Trial
