@@ -1,9 +1,9 @@
 import nodemailer from 'nodemailer';
 import { Resend } from 'resend';
 
-const isProduction = process.env.NODE_ENV === 'production';
+const emailProvider = process.env.EMAIL_PROVIDER || 'nodemailer';
 
-// Nodemailer configuration for development
+// Nodemailer configuration
 const createNodemailerTransport = () => {
   return nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -16,8 +16,8 @@ const createNodemailerTransport = () => {
   });
 };
 
-// Resend configuration for production
-const resend = isProduction ? new Resend(process.env.RESEND_API_KEY) : null;
+// Resend configuration
+const resend = emailProvider === 'resend' ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function sendWaitlistEmail(to, name) {
   const subject = 'Welcome to the IVY Waitlist! 🎉';
@@ -35,7 +35,14 @@ export async function sendWaitlistEmail(to, name) {
             <td align="center">
               <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <!-- Header -->
-                
+                <tr>
+                  <td style="background-color: #111827; padding: 40px 40px 30px; text-align: center;">
+                    <div style="width: 48px; height: 48px; background-color: #10b981; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                      <span style="color: #ffffff; font-weight: bold; font-size: 20px;">IV</span>
+                    </div>
+                    <h1 style="color: #ffffff; font-size: 28px; font-weight: 600; margin: 0;">IVY</h1>
+                  </td>
+                </tr>
                 
                 <!-- Content -->
                 <tr>
@@ -44,7 +51,7 @@ export async function sendWaitlistEmail(to, name) {
                       Hey ${name}! 👋
                     </h2>
                     <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0 0 24px;">
-                      Thanks for joining the IVY waitlist! You're now part of an exclusive group who will be the first to experience Business management that actually makes sense.
+                      Thanks for joining the IVY waitlist! You're now part of an exclusive group who will be the first to experience inventory management that actually makes sense.
                     </p>
                     
                     <div style="background-color: #f3f4f6; border-radius: 12px; padding: 24px; margin: 24px 0;">
@@ -113,8 +120,10 @@ You're receiving this because you joined the IVY waitlist.
   `.trim();
 
   try {
-    if (isProduction && resend) {
-      // Use Resend in production
+    console.log(`Sending email using: ${emailProvider}`);
+
+    if (emailProvider === 'resend' && resend) {
+      // Use Resend
       const { data, error } = await resend.emails.send({
         from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`,
         to: [to],
@@ -127,9 +136,10 @@ You're receiving this because you joined the IVY waitlist.
         throw new Error(error.message);
       }
 
-      return { success: true, messageId: data?.id };
+      console.log('Email sent via Resend:', data?.id);
+      return { success: true, messageId: data?.id, provider: 'resend' };
     } else {
-      // Use Nodemailer in development
+      // Use Nodemailer (default)
       const transporter = createNodemailerTransport();
       
       const info = await transporter.sendMail({
@@ -140,7 +150,8 @@ You're receiving this because you joined the IVY waitlist.
         html: htmlContent,
       });
 
-      return { success: true, messageId: info.messageId };
+      console.log('Email sent via Nodemailer:', info.messageId);
+      return { success: true, messageId: info.messageId, provider: 'nodemailer' };
     }
   } catch (error) {
     console.error('Email sending error:', error);

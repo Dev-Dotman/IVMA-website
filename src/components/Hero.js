@@ -56,7 +56,7 @@ export default function Hero({ onWaitlistClick }) {
           <h1 ref={titleRef} className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
             <em className="font-light">Selling</em> Made Simple with
             <br />
-            IVMA
+            IVY
           </h1>
           <p ref={subtitleRef} className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Track, manage, and optimize your inventory from one powerful, easy-to-use, secure, scalable, and smart dashboard.
