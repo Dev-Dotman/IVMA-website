@@ -130,7 +130,7 @@ export default function PricingPage() {
 
               {/* Get Started Button */}
               <button className="w-full bg-gray-900 text-white py-4 rounded-xl font-medium text-lg hover:bg-gray-800 transition-colors mb-8">
-                {isAnnual ? 'Get started - Save 16%' : 'Get started'}
+                {isAnnual ? 'Join Waitlist - Save 16%' : 'Join Waitlist'}
               </button>
 
               {/* Features */}
@@ -337,13 +337,13 @@ export default function PricingPage() {
               Ready to streamline your inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using IVY to optimize their operations.
+              Join the waitlist and be first to know when IVMA launches.
             </p>
             <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors">
-              Start Free Trial
+              Join the Waitlist
             </button>
             <p className="text-gray-400 mt-4 text-sm">
-              No credit card required • 14-day free trial • Cancel anytime
+              Early access for waitlist members • Launching soon • No commitment required
             </p>
           </div>
         </div>

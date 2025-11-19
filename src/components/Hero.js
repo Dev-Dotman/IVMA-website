@@ -3,7 +3,7 @@ import { Play, ArrowRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
 
-export default function Hero() {
+export default function Hero({ onWaitlistClick }) {
   const heroRef = useRef(null);
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
@@ -62,8 +62,11 @@ export default function Hero() {
             Track, manage, and optimize your inventory from one powerful, easy-to-use, secure, scalable, and smart dashboard.
           </p>
           <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors flex items-center space-x-2 group">
-              <span>Get Started Now</span>
+            <button 
+              onClick={onWaitlistClick}
+              className="bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors flex items-center space-x-2 group"
+            >
+              <span>Join the Waitlist</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors flex items-center space-x-2">

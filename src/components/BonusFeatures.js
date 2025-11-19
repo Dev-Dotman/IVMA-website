@@ -6,7 +6,7 @@ import { Globe, MessageCircle, Clock, Mic, ExternalLink, Toggle } from 'lucide-r
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function BonusFeatures() {
+export default function BonusFeatures({ onWaitlistClick }) {
   const sectionRef = useRef(null);
   const leftContentRef = useRef(null);
   const rightContentRef = useRef(null);
@@ -92,8 +92,11 @@ export default function BonusFeatures() {
             </div>
 
             {/* CTA Button */}
-            <button className="inline-flex items-center space-x-2 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
-              <span>Show Me How</span>
+            <button 
+              onClick={onWaitlistClick}
+              className="inline-flex items-center space-x-2 bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+            >
+              <span>Join the Waitlist</span>
               <ExternalLink className="w-4 h-4" />
             </button>
           </div>

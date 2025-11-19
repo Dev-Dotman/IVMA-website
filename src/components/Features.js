@@ -15,7 +15,7 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Features() {
+export default function Features({ onWaitlistClick }) {
   const featuresRef = useRef(null);
   const titleRef = useRef(null);
   const cardsRef = useRef([]);
@@ -161,10 +161,13 @@ export default function Features() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-gray-500 mb-6">
-            Still not sure? Try it free for 14 days - no strings attached.
+            Ready to simplify your inventory? Join our waitlist today.
           </p>
-          <button className="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors">
-            Start Free Trial
+          <button 
+            onClick={onWaitlistClick}
+            className="bg-gray-900 text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors"
+          >
+            Join the Waitlist
           </button>
         </div>
       </div>

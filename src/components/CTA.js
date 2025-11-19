@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import WaitlistForm from './WaitlistForm';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,13 +36,15 @@ export default function CTA() {
     <section ref={ctaRef} className="px-6 py-20 bg-gray-50">
       <div ref={contentRef} className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-light text-gray-900 mb-6">Ready to Get Started?</h2>
-        <p className="text-xl text-gray-600 mb-8">
-          Join thousands of businesses already using IVY to streamline their inventory management.
+        <p className="text-xl text-gray-600 mb-12">
+          Join the waitlist and be among the first to experience IVMA when we launch.
         </p>
-        <button className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors hover:scale-105 transform">
-          Start Free Trial
-        </button>
-        <p className="text-sm text-gray-500 mt-4">No credit card required • 14-day free trial</p>
+        
+        <WaitlistForm />
+        
+        <p className="text-sm text-gray-500 mt-8">
+          Launching soon • Early access for waitlist members • No credit card required
+        </p>
       </div>
     </section>
   );

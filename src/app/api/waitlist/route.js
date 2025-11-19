@@ -1,0 +1,92 @@
+import { NextResponse } from 'next/server';
+import connectDB from '../../../lib/mongoose';
+import Waitlist from '../../../models/Waitlist';
+
+export async function POST(request) {
+  try {
+    await connectDB();
+
+    const body = await request.json();
+    const { name, email, businessType } = body;
+
+    // Validate required fields
+    if (!name || !email || !businessType) {
+      return NextResponse.json(
+        { error: 'All fields are required' },
+        { status: 400 }
+      );
+    }
+
+    // Check if email already exists
+    const existingUser = await Waitlist.findOne({ email: email.toLowerCase() });
+    if (existingUser) {
+      return NextResponse.json(
+        { error: 'This email is already on the waitlist' },
+        { status: 409 }
+      );
+    }
+
+    // Create waitlist entry
+    const waitlistEntry = await Waitlist.create({
+      name,
+      email,
+      businessType,
+    });
+
+    return NextResponse.json(
+      { 
+        success: true, 
+        message: 'Successfully joined the waitlist!',
+        id: waitlistEntry._id 
+      },
+      { status: 201 }
+    );
+  } catch (error) {
+    console.error('Waitlist API Error:', error);
+
+    // Handle validation errors
+    if (error.name === 'ValidationError') {
+      const messages = Object.values(error.errors).map(err => err.message);
+      return NextResponse.json(
+        { error: messages.join(', ') },
+        { status: 400 }
+      );
+    }
+
+    // Handle duplicate key error
+    if (error.code === 11000) {
+      return NextResponse.json(
+        { error: 'This email is already on the waitlist' },
+        { status: 409 }
+      );
+    }
+
+    return NextResponse.json(
+      { error: 'Failed to join waitlist. Please try again.' },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET(request) {
+  try {
+    await connectDB();
+    
+    const count = await Waitlist.countDocuments();
+    
+    return NextResponse.json(
+      { 
+        success: true, 
+        count 
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    console.error('Waitlist GET Error:', error);
+    
+    return NextResponse.json(
+      { error: 'Failed to fetch waitlist count' },
+      { status: 500 }
+    );
+  }
+}
