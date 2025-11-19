@@ -54,9 +54,9 @@ export default function Hero() {
         {/* Main Heading */}
         <div className="text-center mb-16">
           <h1 ref={titleRef} className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
-            <em className="font-light">Inventory</em> Made Simple with
+            <em className="font-light">We</em> make selling very
             <br />
-            IVMA
+            <em className="font-light">EASY</em>
           </h1>
           <p ref={subtitleRef} className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Track, manage, and optimize your inventory from one powerful, easy-to-use, secure, scalable, and smart dashboard.
@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
 
         {/* Dashboard Preview */}
-        <div ref={dashboardRef} className="relative">
+        {/* <div ref={dashboardRef} className="relative">
           <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
             <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
               <div className="flex items-center space-x-2">
@@ -85,7 +85,6 @@ export default function Hero() {
             </div>
             <div className="p-8">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                {/* Left Column - Inventory List */}
                 <div className="lg:col-span-2">
                   <div className="flex justify-between items-center mb-6">
                     <h3 className="text-lg font-semibold text-gray-900">Shipping Performance</h3>
@@ -117,7 +116,6 @@ export default function Hero() {
                   </div>
                 </div>
                 
-                {/* Right Column - Analytics */}
                 <div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-6">Stock Activity</h3>
                   <div className="text-center mb-6">
@@ -144,10 +142,9 @@ export default function Hero() {
             </div>
           </div>
           
-          {/* Floating decorative elements */}
           <div className="absolute -top-8 -left-8 w-16 h-16 bg-green-100 rounded-full opacity-60"></div>
           <div className="absolute -bottom-8 -right-8 w-20 h-20 bg-green-50 rounded-full opacity-40"></div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
