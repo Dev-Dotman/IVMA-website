@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "IVMA - Inventory Made Simple",
+  title: "IVMA - Commerce Made Simple",
   description:
     "Track, manage, and optimize your inventory from one powerful, easy-to-use dashboard. Real-time tracking, free website, WhatsApp checkout, and AI-powered insights.",
   keywords: [
