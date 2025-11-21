@@ -16,7 +16,7 @@ export default function Testimonials() {
 
   const topRowTestimonials = [
     { 
-      text: "IVY transformed our warehouse operations. Real-time tracking reduced our stock discrepancies by 95%!", 
+      text: "IVMA transformed our warehouse operations. Real-time tracking reduced our stock discrepancies by 95%!", 
       author: "Sarah Johnson", 
       position: "Operations Manager, TechCorp",
       rating: 5
@@ -40,7 +40,7 @@ export default function Testimonials() {
       rating: 5
     },
     { 
-      text: "From raw materials to finished goods - IVY handles our entire supply chain seamlessly.", 
+      text: "From raw materials to finished goods - IVMA handles our entire supply chain seamlessly.", 
       author: "Emily Parker", 
       position: "Manufacturing Lead, Brooklyn",
       rating: 5
@@ -61,7 +61,7 @@ export default function Testimonials() {
       rating: 5
     },
     { 
-      text: "The low-stock predictions are spot-on. IVY knows exactly when we need to reorder!", 
+      text: "The low-stock predictions are spot-on. IVMA knows exactly when we need to reorder!", 
       author: "Alex Rivera", 
       position: "Supply Chain Analyst, Seattle",
       rating: 5
@@ -79,7 +79,7 @@ export default function Testimonials() {
       rating: 5
     },
     { 
-      text: "Been using IVY for 2 years across 3 locations. Never had a system failure - consistently reliable.", 
+      text: "Been using IVMA for 2 years across 3 locations. Never had a system failure - consistently reliable.", 
       author: "Amanda Foster", 
       position: "Multi-store Owner, Denver",
       rating: 5
@@ -180,7 +180,7 @@ export default function Testimonials() {
             across every industry.
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Join thousands of satisfied businesses who've streamlined their inventory management with IVY.
+            Join thousands of satisfied businesses who've streamlined their inventory management with IVMA.
           </p>
         </div>
 

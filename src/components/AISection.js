@@ -192,7 +192,7 @@ export default function AISection() {
             Start Getting AI Reports
           </button>
           <p className="text-gray-500 text-sm mt-4">
-            Your first AI report comes after just one week of using IVY
+            Your first AI report comes after just one week of using IVMA
           </p>
         </div>
       </div>

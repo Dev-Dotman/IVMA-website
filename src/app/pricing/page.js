@@ -296,7 +296,7 @@ export default function PricingPage() {
                 Frequently asked questions
               </h2>
               <p className="text-xl text-gray-600">
-                Everything you need to know about IVY pricing
+                Everything you need to know about IVMA pricing
               </p>
             </div>
 

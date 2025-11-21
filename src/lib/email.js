@@ -20,7 +20,7 @@ const createNodemailerTransport = () => {
 const resend = emailProvider === 'resend' ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export async function sendWaitlistEmail(to, name) {
-  const subject = 'Welcome to the IVY Waitlist! 🎉';
+  const subject = 'Welcome to the IVMA Waitlist! 🎉';
   const htmlContent = `
     <!DOCTYPE html>
     <html>
@@ -35,14 +35,7 @@ export async function sendWaitlistEmail(to, name) {
             <td align="center">
               <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
                 <!-- Header -->
-                <tr>
-                  <td style="background-color: #111827; padding: 40px 40px 30px; text-align: center;">
-                    <div style="width: 48px; height: 48px; background-color: #10b981; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 16px;">
-                      <span style="color: #ffffff; font-weight: bold; font-size: 20px;">IV</span>
-                    </div>
-                    <h1 style="color: #ffffff; font-size: 28px; font-weight: 600; margin: 0;">IVY</h1>
-                  </td>
-                </tr>
+               
                 
                 <!-- Content -->
                 <tr>
@@ -51,7 +44,7 @@ export async function sendWaitlistEmail(to, name) {
                       Hey ${name}! 👋
                     </h2>
                     <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0 0 24px;">
-                      Thanks for joining the IVY waitlist! You're now part of an exclusive group who will be the first to experience inventory management that actually makes sense.
+                      Thanks for joining the IVMA waitlist! You're now part of an exclusive group who will be the first to experience inventory management that actually makes sense.
                     </p>
                     
                     <div style="background-color: #f3f4f6; border-radius: 12px; padding: 24px; margin: 24px 0;">
@@ -68,12 +61,12 @@ export async function sendWaitlistEmail(to, name) {
                     </div>
                     
                     <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 24px 0;">
-                      We're putting the finishing touches on IVY and can't wait to show you what we've built. You'll be among the first to know when we launch.
+                      We're putting the finishing touches on IVMA and can't wait to show you what we've built. You'll be among the first to know when we launch.
                     </p>
                     
                     <p style="color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0;">
                       Stay tuned!<br>
-                      <strong>The IVY Team</strong>
+                      <strong>The IVMA Team</strong>
                     </p>
                   </td>
                 </tr>
@@ -82,10 +75,10 @@ export async function sendWaitlistEmail(to, name) {
                 <tr>
                   <td style="background-color: #f9fafb; padding: 32px 40px; border-top: 1px solid #e5e7eb;">
                     <p style="color: #6b7280; font-size: 14px; line-height: 1.6; margin: 0 0 8px; text-align: center;">
-                      You're receiving this because you joined the IVY waitlist.
+                      You're receiving this because you joined the IVMA waitlist.
                     </p>
                     <p style="color: #6b7280; font-size: 12px; margin: 0; text-align: center;">
-                      © ${new Date().getFullYear()} IVY. All rights reserved.
+                      © ${new Date().getFullYear()} IVMA. All rights reserved.
                     </p>
                   </td>
                 </tr>
@@ -100,7 +93,7 @@ export async function sendWaitlistEmail(to, name) {
   const textContent = `
 Hey ${name}!
 
-Thanks for joining the IVY waitlist! You're now part of an exclusive group who will be the first to experience inventory management that actually makes sense.
+Thanks for joining the IVMA waitlist! You're now part of an exclusive group who will be the first to experience inventory management that actually makes sense.
 
 What's Coming:
 - Real-time inventory tracking (no more spreadsheets!)
@@ -109,14 +102,14 @@ What's Coming:
 - Weekly AI reports with smart insights
 - And a whole lot more...
 
-We're putting the finishing touches on IVY and can't wait to show you what we've built. You'll be among the first to know when we launch.
+We're putting the finishing touches on IVMA and can't wait to show you what we've built. You'll be among the first to know when we launch.
 
 Stay tuned!
-The IVY Team
+The IVMA Team
 
 ---
-You're receiving this because you joined the IVY waitlist.
-© ${new Date().getFullYear()} IVY. All rights reserved.
+You're receiving this because you joined the IVMA waitlist.
+© ${new Date().getFullYear()} IVMA. All rights reserved.
   `.trim();
 
   try {
