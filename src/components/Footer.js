@@ -75,10 +75,13 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4" ref={el => linksRef.current[0] = el}>
             <div className="flex items-center space-x-2">
-              <div ref={logoRef} className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                <Package className="w-4 h-4 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold">IVMA</h3>
+              <img 
+                ref={logoRef}
+                src="/ivma2.png" 
+                alt="IVMA Logo" 
+                className="w-18 h-8 object-contain"
+              />
+              {/* <h3 className="text-xl font-semibold">IVMA</h3> */}
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
               Streamline your inventory management with our powerful, easy-to-use SaaS platform trusted by thousands of businesses worldwide.
