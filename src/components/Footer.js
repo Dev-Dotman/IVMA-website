@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from 'react';
-import { Twitter, Linkedin, Github, Package, ArrowUpRight } from 'lucide-react';
+import { Twitter, Linkedin, Github, MessageCircle, ArrowUpRight } from 'lucide-react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -87,8 +87,11 @@ export default function Footer() {
               Streamline your inventory management with our powerful, easy-to-use SaaS platform trusted by thousands of businesses worldwide.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors group">
+              <a href="https://x.com/orgivma?s=21" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors group">
                 <Twitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="https://discord.gg/K2rec3S9NN" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors group">
+                <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a href="#" className="text-gray-400 hover:text-green-400 transition-colors group">
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
