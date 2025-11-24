@@ -31,6 +31,11 @@ export const metadata = {
   ],
   authors: [{ name: "IVMA Team" }],
   creator: "IVMA",
+  icons: {
+    icon: "/ivma1.png",
+    shortcut: "/ivma1.png",
+    apple: "/ivma1.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
