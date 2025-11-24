@@ -11,6 +11,7 @@ import ToolsPage from "@/components/Tools";
 import BonusFeatures from "../components/BonusFeatures";
 import AISection from "../components/AISection";
 import WaitlistModal from "../components/WaitlistModal";
+import Head from "next/head";
 
 export default function Home() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
