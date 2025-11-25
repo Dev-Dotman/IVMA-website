@@ -24,7 +24,7 @@ export default function Home() {
         <ToolsPage />
         <BonusFeatures onWaitlistClick={() => setIsWaitlistOpen(true)} />
         <Features onWaitlistClick={() => setIsWaitlistOpen(true)} />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <CTA />
       </main>
       <Footer />

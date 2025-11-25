@@ -14,6 +14,11 @@ const WaitlistSchema = new mongoose.Schema({
     trim: true,
     match: [/^\S+@\S+\.\S+$/, 'Please enter a valid email'],
   },
+  whatsappNumber: {
+    type: String,
+    required: [true, 'WhatsApp number is required'],
+    trim: true,
+  },
   businessType: {
     type: String,
     required: [true, 'Business type is required'],

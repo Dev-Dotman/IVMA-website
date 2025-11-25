@@ -1,10 +1,11 @@
 "use client";
 import { useState } from 'react';
-import { Mail, ArrowRight, Check, ChevronDown } from 'lucide-react';
+import { Mail, ArrowRight, Check, ChevronDown, Phone } from 'lucide-react';
 
 export default function WaitlistForm({ onSuccess }) {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
+  const [whatsappNumber, setWhatsappNumber] = useState('');
   const [businessType, setBusinessType] = useState('');
   const [businessTypeValue, setBusinessTypeValue] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -35,6 +36,7 @@ export default function WaitlistForm({ onSuccess }) {
         body: JSON.stringify({
           name,
           email,
+          whatsappNumber,
           businessType: businessTypeValue
         }),
       });
@@ -48,6 +50,7 @@ export default function WaitlistForm({ onSuccess }) {
       setIsSubmitted(true);
       setEmail('');
       setName('');
+      setWhatsappNumber('');
       setBusinessType('');
       setBusinessTypeValue('');
       
@@ -126,6 +129,21 @@ export default function WaitlistForm({ onSuccess }) {
             required
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all text-gray-900 placeholder:text-gray-400"
             placeholder="you@example.com"
+          />
+        </div>
+
+        <div>
+          <label htmlFor="whatsappNumber" className="block text-sm font-medium text-gray-700 mb-2">
+            WhatsApp Number
+          </label>
+          <input
+            type="tel"
+            id="whatsappNumber"
+            value={whatsappNumber}
+            onChange={(e) => setWhatsappNumber(e.target.value)}
+            required
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all text-gray-900 placeholder:text-gray-400"
+            placeholder="+234 812 345 6789"
           />
         </div>
 

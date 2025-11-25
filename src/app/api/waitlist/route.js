@@ -8,10 +8,10 @@ export async function POST(request) {
     await connectDB();
 
     const body = await request.json();
-    const { name, email, businessType } = body;
+    const { name, email, whatsappNumber, businessType } = body;
 
     // Validate required fields
-    if (!name || !email || !businessType) {
+    if (!name || !email || !whatsappNumber || !businessType) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -31,6 +31,7 @@ export async function POST(request) {
     const waitlistEntry = await Waitlist.create({
       name,
       email,
+      whatsappNumber,
       businessType,
     });
 

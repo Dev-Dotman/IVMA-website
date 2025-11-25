@@ -14,9 +14,9 @@ export default function Header({ onWaitlistClick }) {
         </div>
         <nav className="hidden md:flex items-center space-x-8">
           <a href="/" className="text-gray-600 hover:text-gray-900 font-medium">Home</a>
-          <a href="/about" className="text-gray-600 hover:text-gray-900 font-medium">About Us</a>
-          <a href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium">Pricing</a>
-          <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+          {/* <a href="/about" className="text-gray-600 hover:text-gray-900 font-medium">About Us</a> */}
+          {/* <a href="/pricing" className="text-gray-600 hover:text-gray-900 font-medium">Pricing</a> */}
+          {/* <a href="#" className="text-gray-600 hover:text-gray-900 font-medium">Contact</a> */}
         </nav>
         <div className="flex items-center">
           <button 
