@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Mail, ArrowRight, Check, ChevronDown, Phone } from 'lucide-react';
 
-export default function WaitlistForm({ onSuccess }) {
+export default function WaitlistForm({ onSuccess, isModal }) {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [whatsappNumber, setWhatsappNumber] = useState('');
@@ -92,7 +92,7 @@ export default function WaitlistForm({ onSuccess }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 max-h-[90dvh] max-w-md mx-auto">
+    <form onSubmit={handleSubmit} className=`bg-white rounded-2xl p-8 shadow-lg border border-gray-200 ${isModal? 'max-h-[90dvh] overflow-auto' : ''} max-w-md mx-auto`>
       <div className="text-center mb-6">
         <h3 className="text-2xl font-semibold text-gray-900 mb-2">Join the Waitlist</h3>
         <p className="text-gray-600">Be first to know when we launch</p>
