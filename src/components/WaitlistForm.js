@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { Mail, ArrowRight, Check, ChevronDown, Phone } from 'lucide-react';
 
-export default function WaitlistForm({ onSuccess, isModal }) {
+export default function WaitlistForm({ onSuccess, isModal = false }) {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [whatsappNumber, setWhatsappNumber] = useState('');
