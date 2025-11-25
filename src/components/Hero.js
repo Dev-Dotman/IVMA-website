@@ -69,10 +69,7 @@ export default function Hero({ onWaitlistClick }) {
               <span>Join the Waitlist</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <button className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full font-medium hover:bg-gray-50 transition-colors flex items-center space-x-2">
-              <Play className="w-4 h-4" />
-              <span>Watch Demo</span>
-            </button>
+           
           </div>
         </div>
 
