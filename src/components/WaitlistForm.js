@@ -95,7 +95,7 @@ export default function WaitlistForm({ onSuccess, isModal = false }) {
    <form
   onSubmit={handleSubmit}
   className={`bg-white rounded-2xl p-8 shadow-lg border border-gray-200 ${
-    isModal ? 'max-h-[90dvh] overflow-auto' : ''
+    isModal ? 'max-h-[85dvh] overflow-auto' : ''
   } max-w-md mx-auto`}
 >
 
