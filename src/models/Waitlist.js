@@ -16,13 +16,18 @@ const WaitlistSchema = new mongoose.Schema({
   },
   whatsappNumber: {
     type: String,
-    required: [true, 'WhatsApp number is required'],
+    required: false,
     trim: true,
   },
   businessType: {
     type: String,
     required: [true, 'Business type is required'],
     enum: ['small-shop', 'online-store', 'retail', 'warehouse', 'manufacturing', 'other'],
+  },
+  emailConsent: {
+    type: Boolean,
+    required: [true, 'Email consent is required'],
+    default: false,
   },
   status: {
     type: String,

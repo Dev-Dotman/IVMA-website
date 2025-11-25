@@ -8,12 +8,20 @@ export async function POST(request) {
     await connectDB();
 
     const body = await request.json();
-    const { name, email, whatsappNumber, businessType } = body;
+    const { name, email, whatsappNumber, businessType, emailConsent } = body;
 
     // Validate required fields
-    if (!name || !email || !whatsappNumber || !businessType) {
+    if (!name || !email || !businessType) {
       return NextResponse.json(
-        { error: 'All fields are required' },
+        { error: 'Name, email, and business type are required' },
+        { status: 400 }
+      );
+    }
+
+    // Validate email consent
+    if (!emailConsent) {
+      return NextResponse.json(
+        { error: 'You must consent to receive emails to join the waitlist' },
         { status: 400 }
       );
     }
@@ -31,8 +39,9 @@ export async function POST(request) {
     const waitlistEntry = await Waitlist.create({
       name,
       email,
-      whatsappNumber,
+      whatsappNumber: whatsappNumber || undefined,
       businessType,
+      emailConsent,
     });
 
     // Send welcome email (don't block response if email fails)

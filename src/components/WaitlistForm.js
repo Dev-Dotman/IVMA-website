@@ -8,6 +8,7 @@ export default function WaitlistForm({ onSuccess }) {
   const [whatsappNumber, setWhatsappNumber] = useState('');
   const [businessType, setBusinessType] = useState('');
   const [businessTypeValue, setBusinessTypeValue] = useState('');
+  const [emailConsent, setEmailConsent] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -36,8 +37,9 @@ export default function WaitlistForm({ onSuccess }) {
         body: JSON.stringify({
           name,
           email,
-          whatsappNumber,
-          businessType: businessTypeValue
+          whatsappNumber: whatsappNumber || undefined,
+          businessType: businessTypeValue,
+          emailConsent
         }),
       });
 
@@ -53,6 +55,7 @@ export default function WaitlistForm({ onSuccess }) {
       setWhatsappNumber('');
       setBusinessType('');
       setBusinessTypeValue('');
+      setEmailConsent(false);
       
       // Close modal after 2 seconds
       if (onSuccess) {
@@ -134,14 +137,13 @@ export default function WaitlistForm({ onSuccess }) {
 
         <div>
           <label htmlFor="whatsappNumber" className="block text-sm font-medium text-gray-700 mb-2">
-            WhatsApp Number
+            WhatsApp Number <span className="text-gray-400 text-xs">(Optional)</span>
           </label>
           <input
             type="tel"
             id="whatsappNumber"
             value={whatsappNumber}
             onChange={(e) => setWhatsappNumber(e.target.value)}
-            required
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all text-gray-900 placeholder:text-gray-400"
             placeholder="+234 812 345 6789"
           />
@@ -180,9 +182,23 @@ export default function WaitlistForm({ onSuccess }) {
           </div>
         </div>
 
+        <div className="flex items-start space-x-3 pt-2">
+          <input
+            type="checkbox"
+            id="emailConsent"
+            checked={emailConsent}
+            onChange={(e) => setEmailConsent(e.target.checked)}
+            required
+            className="mt-1 w-4 h-4 text-green-500 border-gray-300 rounded focus:ring-2 focus:ring-green-500"
+          />
+          <label htmlFor="emailConsent" className="text-sm text-gray-600 leading-relaxed">
+            I agree to receive email updates about IVMA's launch and product information. You can unsubscribe anytime.
+          </label>
+        </div>
+
         <button
           type="submit"
-          disabled={isLoading || !businessType}
+          disabled={isLoading || !businessType || !emailConsent}
           className="w-full bg-gray-900 text-white px-6 py-3 rounded-full font-medium hover:bg-gray-800 transition-colors flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isLoading ? (
