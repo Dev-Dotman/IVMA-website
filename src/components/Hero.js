@@ -54,7 +54,7 @@ export default function Hero({ onWaitlistClick }) {
         {/* Main Heading */}
         <div className="text-center mb-16">
           <h1 ref={titleRef} className="text-5xl md:text-6xl font-light text-gray-900 mb-6">
-            <em className="font-light">Selling</em> Made Simple with
+            <em className="font-light">Business</em> Made Simple with
             <br />
             IVMA
           </h1>
