@@ -34,7 +34,7 @@ export default function WaitlistModal({ isOpen, onClose }) {
         >
           <X className="w-8 h-8" />
         </button>
-        <WaitlistForm onSuccess={onClose} />
+        <WaitlistForm onSuccess={onClose} isModal={true} />
       </div>
     </div>
   );
