@@ -50,7 +50,7 @@ export default function BonusFeatures({ onWaitlistClick }) {
             {/* Main Heading */}
             <h2 className="text-4xl md:text-5xl font-normal text-gray-900 leading-tight">
               We give you a<br />
-              <span className="text-green-600">free website</span> too!
+              <span className="text-green-600">free E-commerce website</span> too!
             </h2>
 
             {/* Description */}
@@ -75,8 +75,8 @@ export default function BonusFeatures({ onWaitlistClick }) {
                   <MessageCircle className="w-3 h-3 text-white" />
                 </div>
                 <div>
-                  <span className="text-gray-900 font-semibold block">WhatsApp checkout</span>
-                  <span className="text-gray-600 text-sm">Don't like online payments? Customers can message you directly on WhatsApp to complete their order</span>
+                  <span className="text-gray-900 font-semibold block">WhatsApp & Telegram checkout</span>
+                  <span className="text-gray-600 text-sm">Don't like online payments? Customers can message you on WhatsApp or Telegram to complete their order</span>
                 </div>
               </div>
 
@@ -166,17 +166,17 @@ export default function BonusFeatures({ onWaitlistClick }) {
                   </div>
                 </div>
 
-                {/* WhatsApp Checkout Example */}
+                {/* WhatsApp/Telegram Checkout Example */}
                 <div className="border-t border-gray-200 pt-4 mt-6">
                   <div className="flex items-center space-x-3 mb-3">
                     <MessageCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-sm font-medium text-gray-900">WhatsApp Checkout</span>
+                    <span className="text-sm font-medium text-gray-900">Messaging Checkout</span>
                   </div>
                   <div className="bg-green-50 p-3 rounded-lg">
                     <div className="text-sm text-gray-700">
-                      "Hi! I'd like to buy the iPhone case. Can we complete this on WhatsApp?"
+                      "Hi! I'd like to buy the iPhone case. Can we complete this on WhatsApp or Telegram?"
                     </div>
-                    <div className="text-xs text-green-600 mt-1 font-medium">Click to chat on WhatsApp →</div>
+                    <div className="text-xs text-green-600 mt-1 font-medium">Click to chat →</div>
                   </div>
                 </div>
               </div>

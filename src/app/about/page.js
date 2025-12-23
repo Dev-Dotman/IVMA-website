@@ -21,29 +21,30 @@ const About = () => {
               </div>
               
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light text-gray-900 mb-8 leading-tight tracking-tight">
-                Making inventory management<br />
+                Making business management<br />
                 <span className="text-green-600">stupid simple.</span>
               </h1>
 
               {/* Enhanced Description */}
               <p className="text-xl text-gray-600 font-light mb-8 leading-relaxed max-w-2xl">
                 We're tired of complicated software that needs a PhD to use. 
-               IVMA is built for real business owners who want things to just work.
+                IVMA is built for real business owners who want to sell online, manage inventory, 
+                process sales, and grow — all from one simple platform.
               </p>
 
               {/* Stats */}
               <div className="flex items-center space-x-8 mb-12">
                 <div>
                   <div className="text-3xl font-light text-gray-900 mb-1">10K+</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-wider">Happy Businesses</div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wider">Active Sellers</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-light text-gray-900 mb-1">5M+</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-wider">Items Tracked</div>
+                  <div className="text-3xl font-light text-gray-900 mb-1">50K+</div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wider">Products Listed</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-light text-gray-900 mb-1">99.9%</div>
-                  <div className="text-sm text-gray-500 uppercase tracking-wider">Always Working</div>
+                  <div className="text-3xl font-light text-gray-900 mb-1">All 36</div>
+                  <div className="text-sm text-gray-500 uppercase tracking-wider">States Covered</div>
                 </div>
               </div>
               
@@ -57,15 +58,15 @@ const About = () => {
               <div className="flex items-center space-x-6 mt-12 pt-8 border-t border-gray-200">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Support when you need it</span>
+                  <span className="text-sm text-gray-600">E-commerce + Inventory + POS</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Shield className="w-4 h-4 text-gray-400" />
-                  <span className="text-sm text-gray-600">Your data is safe</span>
+                  <span className="text-sm text-gray-600">Bank-level security</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Zap className="w-4 h-4 text-gray-400" />
-                  <span className="text-sm text-gray-600">Always up-to-date</span>
+                  <span className="text-sm text-gray-600">Real-time updates</span>
                 </div>
               </div>
             </div>
@@ -81,7 +82,7 @@ const About = () => {
                 {/* Main content card */}
                 <div className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm max-w-sm">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="text-sm text-gray-500 font-medium">IVMA DASHBOARD</div>
+                    <div className="text-sm text-gray-500 font-medium">IVMA PLATFORM</div>
                     <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center">
                       <Package className="w-4 h-4 text-white" />
                     </div>
@@ -91,7 +92,7 @@ const About = () => {
                     <div className="flex items-center justify-between py-3 border-b border-gray-100">
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-700 font-medium">Know what you have</span>
+                        <span className="text-gray-700 font-medium">Sell online nationwide</span>
                       </div>
                       <span className="text-sm text-gray-500">✓</span>
                     </div>
@@ -99,7 +100,7 @@ const About = () => {
                     <div className="flex items-center justify-between py-3 border-b border-gray-100">
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-700 font-medium">Get alerts when low</span>
+                        <span className="text-gray-700 font-medium">Track inventory live</span>
                       </div>
                       <span className="text-sm text-gray-500">✓</span>
                     </div>
@@ -107,14 +108,14 @@ const About = () => {
                     <div className="flex items-center justify-between py-3">
                       <div className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                        <span className="text-gray-700 font-medium">Simple reports</span>
+                        <span className="text-gray-700 font-medium">Process sales & payments</span>
                       </div>
                       <span className="text-sm text-gray-500">✓</span>
                     </div>
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">Easy to use</div>
+                    <div className="text-sm text-gray-500">All-in-one solution</div>
                     <div className="flex items-center space-x-1">
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -127,7 +128,7 @@ const About = () => {
                 
                 {/* Bottom accent element */}
                 <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-gray-50 rounded-2xl border border-gray-200 flex items-center justify-center">
-                  <div className="text-2xl font-light text-green-600">😊</div>
+                  <div className="text-2xl font-light text-green-600">🚀</div>
                 </div>
               </div>
             </div>
@@ -140,8 +141,8 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed font-light max-w-4xl mx-auto">
-              "We built IVMA because we were tired of inventory software that made simple things complicated. 
-              Every business owner should be able to know what they have in stock without needing a computer science degree."
+              "We built IVMA because we were tired of business software that made simple things complicated. 
+              Every business owner should be able to sell online, manage inventory, and grow their business without needing ten different tools."
             </p>
             <div className="mt-8">
               <div className="text-gray-400 text-sm">

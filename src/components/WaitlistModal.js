@@ -27,7 +27,7 @@ export default function WaitlistModal({ isOpen, onClose }) {
       ></div>
       
       {/* Modal Content */}
-      <div className="relative z-50 w-full max-w-md">
+      <div className="relative z-50 w-full max-w-md max-h-[80dvh] overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors"
